@@ -1,0 +1,10 @@
+.checkoutProduct {
+    display: flex;
+    padding: 10px;
+}
+
+.checkoutProduct_image {
+    width: 150px;
+    height: 180px;
+    padding-left: 12px;
+}
