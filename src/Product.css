@@ -10,8 +10,8 @@
 
 .product_info {
     height: 100px;
-    margin-bottom: 15px;
-    font-weight: 900;
+    margin-bottom: 0px;
+    font-weight: 500;
 }
 
 .product_price {
@@ -23,7 +23,7 @@
 }
 
 .product>img {
-    max-height: 200px;
+    max-height: 99px;
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;

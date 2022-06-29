@@ -9,7 +9,7 @@ function Header() {
 
     const [{ basket ,user}] = useStateValue();
 
-    console.log("Basket is" , basket);
+    // console.log("Basket is" , basket);
 
     const login = () => {
         if (user) {
@@ -18,10 +18,6 @@ function Header() {
     }
     return (
         <nav className='header'>
-            {/* logo on the left side
-        search box
-        3 link
-        basket icon with number */}
             <Link to='/'>
                 <img className='header_logo' src="https://www.doorwaysva.org/wp-content/uploads/2019/06/amazon-logo.png" alt="" />
             </Link>

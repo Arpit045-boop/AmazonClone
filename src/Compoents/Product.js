@@ -20,21 +20,15 @@ function Product(props) {
 
     return (
         <div className='product'>
+            <img src={props.image} alt="" />
             <div className='product_info'>
                 <p>{props.title}</p>
                 <p className='product_price'>
                     <small>$</small>
                     <strong>{props.price}</strong>
                 </p>
-                <div className="product_rating">
-                    {
-                        Array(props.rating).fill().map((_) => (
-                            <p>star</p>
-                        ))
-                    }
-                </div>
             </div>
-            <img src={props.image} alt="" />
+
             <button onClick={addToBasket}>Add to Basket</button>
         </div>
     )

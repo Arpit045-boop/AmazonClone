@@ -1,19 +1,87 @@
-.home{
+.home {
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .home_img {
     width: 100%;
-    height: 40vh;
-    /* z-index: -1; */
-    /* margin-bottom: -125px; */
-    
+    height: 100vh;
 }
 
-.home_row{
+.home_row {
     display: flex;
-    z-index: 1;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.caro_product {
+    width: 20rem;
+    height: 22rem;
+    background-color: white;
+    margin-left: 24px;
+    margin-right: 25px;
+    z-index: 1;
+    padding: 20px 15px 20px 15px;
+}
+
+.first_row {
+    margin-top: -420px;
+    margin-bottom: 60px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.caro_img {
+    width: 100%;
+    height: 15rem;
+}
+
+.second_row {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}
+
+.caro_product_signin {
+    width: 20rem;
+    height: 11rem;
+    background-color: white;
+    margin-left: 24px;
+    margin-right: 24px;
+    z-index: 1;
+    padding: 20px 15px 20px 15px;
+}
+
+.btn-danger {
+    width: 100%;
+    font-size: 12px;
+    background-color: #FFD814;
+    color: black;
+    border: 1px solid #FFD814;
+}
+
+.btn:hover {
+    width: 100%;
+    font-size: 12px;
+    background-color: #FFD814;
+    color: black;
+    border: 1px solid #FFD814;
+}
+
+.cate_img {
+    width: 100%;
+}
+.row{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.third_row{
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top:10px;
+    margin-bottom: 10px;
 }
