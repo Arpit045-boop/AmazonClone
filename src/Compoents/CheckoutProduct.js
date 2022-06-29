@@ -1,9 +1,9 @@
 import React from 'react'
 import "../CheckoutProduct.css"
-import { useStateValue } from './StateProvider'
+import { useStateVal } from './Context/StateProvider'
 function CheckoutProduct(props) {
-    const [{ basket }, dispatch] = useStateValue();
-    const removeBasket = () => {
+    const [{ Mybasket }, dispatch] = useStateVal();
+    const removeMyBasket = () => {
         // remove from the basket
         dispatch({
             type: "REMOVE_FROM_BASKET",
@@ -27,7 +27,7 @@ function CheckoutProduct(props) {
                         ))
                     }
                 </div>
-                <button onClick={removeBasket}>Remove from basket</button>
+                <button onClick={removeMyBasket}>Remove from basket</button>
             </div>
         </div>
     )

@@ -2,37 +2,37 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../Header.css";
 import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import { useStateValue } from './StateProvider';
+import ShoppingbasketIcon from '@mui/icons-material/ShoppingBasket';
+import { useStateVal } from './Context/StateProvider';
 import { auth } from './firebase';
 function Header() {
 
-    const [{ basket ,user}] = useStateValue();
+    const [{ Mybasket, Newuser }] = useStateVal();
 
-    // console.log("Basket is" , basket);
+    // console.log("Mybasket is" , Mybasket);
 
-    const login = () => {
-        if (user) {
+    const Mylogin = () => {
+        if (Newuser) {
             auth.signOut();
         }
     }
     return (
         <nav className='header'>
             <Link to='/'>
-                <img className='header_logo' src="https://www.doorwaysva.org/wp-content/uploads/2019/06/amazon-logo.png" alt="" />
+                <img className='header_log' src="https://www.doorwaysva.org/wp-content/uploads/2019/06/amazon-logo.png" alt="" />
             </Link>
             <div className="header_search">
                 <input type='text'
                     className='header_searchInput'
                 />
-                <SearchIcon className='header_searchIcon' />
+                <SearchIcon className='header_searchicon' />
             </div>
 
             <div className='header_nav'>
-                <Link to={!user && "/login"} className='header_link'>
-                    <div onClick={login} className='header_option'>
-                        <span className="header_optionLineOne">Hello { user?.email}</span>
-                        <span className='header_optionLineTwo' >{user ? 'Sign Out' : 'Sign in'}</span>
+                <Link to={!Newuser && "/login"} className='header_link'>
+                    <div onClick={Mylogin} className='header_option'>
+                        <span className="header_optionLineOne">Hello {Newuser?.email}</span>
+                        <span className='header_optionLineTwo' >{Newuser ? 'Sign Out' : 'Sign in'}</span>
                     </div>
                 </Link>
                 <Link to="/" className='header_link'>
@@ -48,9 +48,9 @@ function Header() {
                     </div>
                 </Link>
                 <Link to='/checkout'>
-                    <div className='header_optionBasket'>
-                        <ShoppingBasketIcon />
-                        <span className='header_optionLineTwo header_basketCount'>{basket?.length}</span>
+                    <div className='header_optionbasket'>
+                        <ShoppingbasketIcon />
+                        <span className='header_optionLineTwo header_basketCount'>{Mybasket?.length}</span>
                     </div>
                 </Link>
             </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import "../Product.css"
-import { useStateValue } from './StateProvider'
+import { useStateVal } from './Context/StateProvider';
 
 function Product(props) {
-    const [{ }, dispatch] = useStateValue();
-    const addToBasket = () => {
+    const [{ }, dispatch] = useStateVal();
+    const addToMyBasket = () => {
         // Add item to the basket....
         dispatch({
             type: "ADD_TO_BASKET",
@@ -29,7 +29,7 @@ function Product(props) {
                 </p>
             </div>
 
-            <button onClick={addToBasket}>Add to Basket</button>
+            <button onClick={addToMyBasket}>Add to Basket</button>
         </div>
     )
 }

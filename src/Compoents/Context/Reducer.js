@@ -1,44 +1,44 @@
 export const initialState = {
-    basket: [],
-    user: null
+    Mybasket: [],
+    Newuser: null
 };
 
-export const getBasketTotal = (basket) =>
-    basket?.reduce((amount, item) => item.price + amount, 0);
+export const getMyBasketTotal = (Mybasket) =>
+    Mybasket?.reduce((amount, item) => item.price + amount, 0);
 
 function reducer(state, action) {
-    console.log(action)
+    // console.log(action)
     switch (action.type) {
         case "SET_USER":
             return {
                 ...state,
-                user: action.user
+                Newuser: action.Newuser
             }
         case "ADD_TO_BASKET":
             // Logic Add to basket
             return {
                 ...state,
-                basket: [...state.basket, action.item],
+                Mybasket: [...state.Mybasket, action.item],
             }
         // break;
         case "REMOVE_FROM_BASKET":
             // Logic Remove from basket
             // we cloned the basket
-            let newBasket = [...state.basket];
+            let newBasket = [...state.Mybasket];
 
-            const index = state.basket.findIndex(
-                (basketItem) => basketItem.id === action.id
+            const newIndex = state.Mybasket.findIndex(
+                (MybasketItem) => MybasketItem.id === action.id
             )
 
-            if (index >= 0) {
+            if (newIndex >= 0) {
                 // item exist in the basket
-                newBasket.splice(index, 1);
+                newBasket.splice(newIndex, 1);
             } else {
                 console.warn(`Can't remove product (id: ${action.id}) as it's not present`);
             }
             return {
                 ...state,
-                basket: newBasket
+                Mybasket: newBasket
             }
         // break;
         default:

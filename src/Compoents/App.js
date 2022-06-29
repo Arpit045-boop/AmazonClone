@@ -3,36 +3,36 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import Login from './Login';
 import Home from './Home';
-import { useStateValue } from './StateProvider';
+import { useStateVal } from './Context/StateProvider';
 import { auth } from './firebase';
 
 function App() {
-    const [{user}, dispatch] = useStateValue();
+    const [{ Newuser }, dispatch] = useStateVal();
 
     // useeffect : Pla  ce code which run on a given condition
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged((authUser) => {
+        const unsubscribeMe = auth.onAuthStateChanged((authUser) => {
             if (authUser) {
                 // user is logged in
                 dispatch({
                     type: "SET_USER",
-                    user: authUser,
+                    Newuser: authUser,
                 });
             } else {
                 // user is logged out
                 dispatch({
                     type: "SET_USER",
-                    user: null,
+                    Newuser: null,
                 });
             }
         });
-        // ANy cleanup operation
+        // Any cleanup operation
         return () => {
-            unsubscribe();
+            unsubscribeMe();
         };
     }, []);
-    console.log("user:", user);
+    // console.log("user:", user);
     return (
         <Router>
             <Routes>
