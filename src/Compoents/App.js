@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import Login from './Login';
 import Home from './Home';
-import { useStateVal } from './Context/StateProvider';
+import { useStateVal } from './Context/MyStateProvider';
 import { auth } from './firebase';
 
 function App() {
     const [{ Newuser }, dispatch] = useStateVal();
 
-    // useeffect : Pla  ce code which run on a given condition
+    // useeffect : Place code which run on a given condition
 
     useEffect(() => {
         const unsubscribeMe = auth.onAuthStateChanged((authUser) => {

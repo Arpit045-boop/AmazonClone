@@ -1,4 +1,4 @@
-.product {
+.Myproduct {
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -8,29 +8,24 @@
     width: 100%;
 }
 
-.product_info {
+.My_product_info {
     height: 100px;
     margin-bottom: 0px;
     font-weight: 500;
 }
 
-.product_price {
+.My_product_price {
     margin-top: 5px;
 }
 
-.product_rating {
-    display: flex;
-}
-
-.product>img {
+.Myproduct>img {
     max-height: 99px;
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
-.product>button {
+.Myproduct>button {
     background-color: #f0c14b;
     border: 1px solid;
-
 }

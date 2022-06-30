@@ -1,6 +1,6 @@
 import React from 'react'
 import "../CheckoutProduct.css"
-import { useStateVal } from './Context/StateProvider'
+import { useStateVal } from './Context/MyStateProvider'
 function CheckoutProduct(props) {
     const [{ Mybasket }, dispatch] = useStateVal();
     const removeMyBasket = () => {
@@ -12,8 +12,8 @@ function CheckoutProduct(props) {
     }
 
     return (
-        <div className="checkoutProduct">
-            <img className="checkoutProduct_image" src={props.image} alt='' />
+        <div className="checkoutMyProduct">
+            <img className="checkoutMyProduct_image" src={props.image} alt='' />
             <div className='checkoutProduct_info'>
                 <p>{props.title}</p>
                 <p className='checkoutProduct_price'>

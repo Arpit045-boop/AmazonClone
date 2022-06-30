@@ -34,7 +34,7 @@ function reducer(state, action) {
                 // item exist in the basket
                 newBasket.splice(newIndex, 1);
             } else {
-                console.warn(`Can't remove product (id: ${action.id}) as it's not present`);
+                console.warn(`You Cannot remove product (id: ${action.id}) as it's not present`);
             }
             return {
                 ...state,

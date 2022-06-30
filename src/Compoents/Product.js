@@ -1,9 +1,9 @@
 import React from 'react'
 import "../Product.css"
-import { useStateVal } from './Context/StateProvider';
+import { useStateVal } from './Context/MyStateProvider';
 
 function Product(props) {
-    const [{ }, dispatch] = useStateVal();
+    const [{ Mybasket }, dispatch] = useStateVal();
     const addToMyBasket = () => {
         // Add item to the basket....
         dispatch({
@@ -19,11 +19,11 @@ function Product(props) {
     }
 
     return (
-        <div className='product'>
+        <div className='Myproduct'>
             <img src={props.image} alt="" />
-            <div className='product_info'>
+            <div className='My_product_info'>
                 <p>{props.title}</p>
-                <p className='product_price'>
+                <p className='My_product_price'>
                     <small>$</small>
                     <strong>{props.price}</strong>
                 </p>
