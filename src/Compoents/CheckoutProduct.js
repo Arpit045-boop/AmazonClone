@@ -20,13 +20,6 @@ function CheckoutProduct(props) {
                     <small>$</small>
                     <strong>{props.price}</strong>
                 </p>
-                <div className="checkoutProduct_rating">
-                    {
-                        Array(props.rating).fill().map((_) => (
-                            <p>star</p>
-                        ))
-                    }
-                </div>
                 <button onClick={removeMyBasket}>Remove from basket</button>
             </div>
         </div>
