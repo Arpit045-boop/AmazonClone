@@ -8,13 +8,13 @@ function SubTotal() {
     const [{ Mybasket }] = useStateVal();
     return (
         <div className='My_Product_subtotal'>
-            <h1>Subtotal</h1>
+            <h3>Subtotal</h3>
 
             <CurrencyFormat
-                renderText={(My_value) => (
+                renderText={(value) => (
                     <>
                         <p>
-                            SubTotal ({Mybasket.length} item):<strong>{`${My_value}`}</strong>
+                            SubTotal ({Mybasket.length} item):<strong>{`${value}`}</strong>
                         </p>
                         <small className="My_subtotal_gift">
                             <input type="checkbox" />This order contain a gift
@@ -23,7 +23,7 @@ function SubTotal() {
 
                 )}
                 decimalScale={2}
-                My_value={getMyBasketTotal(Mybasket)}
+                value={getMyBasketTotal(Mybasket)}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}
