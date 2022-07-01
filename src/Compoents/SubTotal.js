@@ -7,28 +7,28 @@ import { getMyBasketTotal } from './Context/Reducer'
 function SubTotal() {
     const [{ Mybasket }] = useStateVal();
     return (
-        <div className='subtotal'>
+        <div className='My_Product_subtotal'>
             <h1>Subtotal</h1>
 
             <CurrencyFormat
-                renderText={(value) => (
+                renderText={(My_value) => (
                     <>
                         <p>
-                            SubTotal ({Mybasket.length} item):<strong>{`${value}`}</strong>
+                            SubTotal ({Mybasket.length} item):<strong>{`${My_value}`}</strong>
                         </p>
-                        <small className="subtotal_gift">
+                        <small className="My_subtotal_gift">
                             <input type="checkbox" />This order contain a gift
                         </small>
                     </>
 
                 )}
                 decimalScale={2}
-                value={getMyBasketTotal(Mybasket)}
+                My_value={getMyBasketTotal(Mybasket)}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}
             />
-            <button>Proceed to Checkout</button>
+            <button className='checkout_button'>Proceed to Checkout</button>
         </div>
     )
 }

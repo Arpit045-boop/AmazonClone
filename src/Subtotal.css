@@ -1,9 +1,18 @@
-.subtotal{
+.My_Product_subtotal {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
     height: 100px;
-    background-color: #f3f3f3;
-    
+}
+
+.checkout_button {
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #FFD814;
+    color: black;
+    border: 1px solid #FFD814;
+    border-radius: 12px;
+    margin-top: 10px;
 }

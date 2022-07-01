@@ -88,21 +88,21 @@ function Home() {
                     </div>
                     <div className='today_deal col-lg-2'>
                         <Product
-                            id={1}
+                            id={2}
                             price={11000}
                             image={"https://m.media-amazon.com/images/I/31G1NouVxaL._AC_SY200_.jpg"}
                         />
                     </div>
                     <div className='today_deal col-lg-2'>
                         <Product
-                            id={1}
+                            id={3}
                             price={2000}
                             image={"https://m.media-amazon.com/images/I/41+sLJHyA8L._AC_SY200_.jpg"}
                         />
                     </div>
                     <div className='today_deal col-lg-2'>
                         <Product
-                            id={1}
+                            id={4}
                             // title={"Arpit: The Master of Full stack development"}
                             price={1000}
                             // rating={5}
@@ -111,7 +111,7 @@ function Home() {
                     </div>
                     <div className='today_deal col-lg-2'>
                         <Product
-                            id={1}
+                            id={5}
                             // title={"Arpit: The Master of Full stack development"}
                             price={6000}
                             // rating={5}
@@ -120,7 +120,7 @@ function Home() {
                     </div>
                     <div className='today_deal col-lg-2'>
                         <Product
-                            id={1}
+                            id={6}
                             // title={"Arpit: The Master of Full stack development"}
                             price={3000}
                             // rating={5}
@@ -133,7 +133,7 @@ function Home() {
                 <div className='row'>
                     <div className='col-lg-4'>
                         <Product
-                            id={1}
+                            id={7}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -142,7 +142,7 @@ function Home() {
                     </div>
                     <div className='col-lg-4'>
                         <Product
-                            id={1}
+                            id={8}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -151,7 +151,7 @@ function Home() {
                     </div>
                     <div className='col-lg-4'>
                         <Product
-                            id={1}
+                            id={9}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -162,7 +162,7 @@ function Home() {
                 <div className='row'>
                     <div className='col-lg-4'>
                         <Product
-                            id={1}
+                            id={10}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -171,7 +171,7 @@ function Home() {
                     </div>
                     <div className='col-lg-4'>
                         <Product
-                            id={1}
+                            id={11}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -180,7 +180,7 @@ function Home() {
                     </div>
                     <div className='col-lg-4'>
                         <Product
-                            id={1}
+                            id={12}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -191,7 +191,7 @@ function Home() {
                 <div className='row'>
                     <div className='col-lg-6'>
                         <Product
-                            id={1}
+                            id={13}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}
@@ -200,7 +200,7 @@ function Home() {
                     </div>
                     <div className='col-lg-6'>
                         <Product
-                            id={1}
+                            id={14}
                             title={"Arpit: The Master of Full stack development"}
                             price={12000}
                             rating={5}

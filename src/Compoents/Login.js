@@ -7,7 +7,7 @@ function Login() {
   const history = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const login = (event) => {
+  const Mylogin = (event) => {
     event.preventDefault(); //Stop refreshing !!!
 
     // do login login......
@@ -21,7 +21,7 @@ function Login() {
       })
   }
 
-  const register = (event) => {
+  const Myregister = (event) => {
     event.preventDefault(); //Stop refreshing !!!
     // do register logic......
     auth.createUserWithEmailAndPassword(email, password).then((auth) => {
@@ -32,12 +32,12 @@ function Login() {
   }
 
   return (
-    <div className="Login">
+    <div className="My_Login">
       <Link to="/">
-        <img className='login_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png' />
+        <img className='My_login_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png' />
       </Link>
 
-      <div className='login_container'>
+      <div className='My_login_container'>
         <h1>Sign in</h1>
         <form>
           <h5>E-mail</h5>
@@ -48,13 +48,13 @@ function Login() {
           <input value={password} onChange={(event) => {
             setPassword(event.target.value)
           }} type="password" />
-          <button onClick={login} type='submit' className='login_signInButton'>Sign in</button>
+          <button onClick={Mylogin} type='submit' className='My_login_signInButton'>Sign in</button>
         </form>
 
         <p>
           By signing-in you agree to amazon's privacy policy
         </p>
-        <button onClick={register} className='login_registerButton'>Create your Amazon Account</button>
+        <button onClick={Myregister} className='My_login_registerButton'>Create your Amazon Account</button>
       </div>
     </div>
   )
