@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import "../Login.css"
+import users from '../users_data';
 import { auth } from './firebase';
 
 function Login() {
   const history = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // const [currentUser, setUsers] = useState([{ email: "", password: "" }]);
   const Mylogin = (event) => {
     event.preventDefault(); //Stop refreshing !!!
 
@@ -24,9 +26,14 @@ function Login() {
   const Myregister = (event) => {
     event.preventDefault(); //Stop refreshing !!!
     // do register logic......
+    // console.log(email);
+    // console.log(password);
+    // setUsers(currentUser => [...currentUser, { email: email, password: password },]);
+    // console.log(currentUser);
     auth.createUserWithEmailAndPassword(email, password).then((auth) => {
       // created a user
       history('/');
+
     })
       .catch((e) => alert(e.message));
   }

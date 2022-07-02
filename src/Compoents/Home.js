@@ -5,6 +5,7 @@ import Product from './Product'
 import { Link } from 'react-router-dom'
 import Carousal from './Carousal'
 import Footer from './Footer'
+import { products, products_three } from '../product_json';
 
 function Home() {
     return (
@@ -79,131 +80,45 @@ function Home() {
 
                 <div className='third_row row'>
                     <h5>Today's Deals</h5>
-                    <div className='today_deal col-lg-2'>
-                        <Product
-                            id={1}
-                            price={12000}
-                            image={"https://m.media-amazon.com/images/I/2186SkfNe+L._AC_SY200_.jpg"}
-                        />
-                    </div>
-                    <div className='today_deal col-lg-2'>
-                        <Product
-                            id={2}
-                            price={11000}
-                            image={"https://m.media-amazon.com/images/I/31G1NouVxaL._AC_SY200_.jpg"}
-                        />
-                    </div>
-                    <div className='today_deal col-lg-2'>
-                        <Product
-                            id={3}
-                            price={2000}
-                            image={"https://m.media-amazon.com/images/I/41+sLJHyA8L._AC_SY200_.jpg"}
-                        />
-                    </div>
-                    <div className='today_deal col-lg-2'>
-                        <Product
-                            id={4}
-                            // title={"Arpit: The Master of Full stack development"}
-                            price={1000}
-                            // rating={5}
-                            image={"https://m.media-amazon.com/images/I/41ezRvTwcaL._AC_SY200_.jpg"}
-                        />
-                    </div>
-                    <div className='today_deal col-lg-2'>
-                        <Product
-                            id={5}
-                            // title={"Arpit: The Master of Full stack development"}
-                            price={6000}
-                            // rating={5}
-                            image={"https://m.media-amazon.com/images/I/41QhpQamQyL._AC_SY200_.jpg"}
-                        />
-                    </div>
-                    <div className='today_deal col-lg-2'>
-                        <Product
-                            id={6}
-                            // title={"Arpit: The Master of Full stack development"}
-                            price={3000}
-                            // rating={5}
-                            image={"https://m.media-amazon.com/images/I/315-C8hhEJL._AC_SY200_.jpg"}
-                        />
-                    </div>
+                    {products?.map(i => (
+                        <div className='today_deal col-lg-2'>
+                            <Product
+                                id={i.id}
+                                price={i.price}
+                                image={i.image}
+                            />
+                        </div>
+                    )
+                    )}
                 </div>
 
+                <div className='row'>
+                    {products_three?.map(item=>(
+                    <div className='col-lg-4'>
+                        <Product
+                            id={item.id}
+                            title={item.title}
+                            price={item.price}
+                            image={item.image}
+                        />
+                    </div>    
+                    ))}
+                </div>    
 
-                <div className='row'>
-                    <div className='col-lg-4'>
-                        <Product
-                            id={7}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
-                            image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
-                        />
-                    </div>
-                    <div className='col-lg-4'>
-                        <Product
-                            id={8}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
-                            image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
-                        />
-                    </div>
-                    <div className='col-lg-4'>
-                        <Product
-                            id={9}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
-                            image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
-                        />
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col-lg-4'>
-                        <Product
-                            id={10}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
-                            image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
-                        />
-                    </div>
-                    <div className='col-lg-4'>
-                        <Product
-                            id={11}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
-                            image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
-                        />
-                    </div>
-                    <div className='col-lg-4'>
-                        <Product
-                            id={12}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
-                            image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
-                        />
-                    </div>
-                </div>
                 <div className='row'>
                     <div className='col-lg-6'>
                         <Product
                             id={13}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
+                            title={"The Master of Full stack development"}
+                            price={2000}
                             image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
                         />
                     </div>
                     <div className='col-lg-6'>
                         <Product
                             id={14}
-                            title={"Arpit: The Master of Full stack development"}
-                            price={12000}
-                            rating={5}
+                            title={"The Master of Full stack development"}
+                            price={2000}
                             image={"https://images-na.ssl-images-amazon.com/images/I/41bCSpeERKL._SX348_BO1,204,203,200_.jpg"}
                         />
                     </div>
