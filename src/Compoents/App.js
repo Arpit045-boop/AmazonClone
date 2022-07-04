@@ -39,6 +39,7 @@ function App() {
                 <Route path='/checkout' element={<Checkout />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Home />} />
+                <Route path='/user_data' element={<Home />} />
             </Routes>
         </Router >
     )

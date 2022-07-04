@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import "../Login.css"
-import users from '../users_data';
 import { auth } from './firebase';
-
+import axios from 'axios';
 function Login() {
+
+
   const history = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [currentUser, setUsers] = useState([{ email: "", password: "" }]);
+  const [users, setUsers] = useState({ email: "", password: "" });
+  const [userId, setUserId] = useState(0);
   const Mylogin = (event) => {
     event.preventDefault(); //Stop refreshing !!!
 
@@ -16,27 +18,31 @@ function Login() {
 
     auth.signInWithEmailAndPassword(email, password).then((auth) => {
       // Logged in....rediect home page
+
       history('/');
     })
       .catch((e) => {
         alert(e.message)
       })
   }
-
   const Myregister = (event) => {
     event.preventDefault(); //Stop refreshing !!!
-    // do register logic......
-    // console.log(email);
-    // console.log(password);
-    // setUsers(currentUser => [...currentUser, { email: email, password: password },]);
-    // console.log(currentUser);
     auth.createUserWithEmailAndPassword(email, password).then((auth) => {
-      // created a user
-      history('/');
-
+      setUsers({ email: email, password: password })
+      // history('/')
     })
       .catch((e) => alert(e.message));
   }
+  useEffect(() => {
+    // console.log(users);
+    const user = { email: email, password: password }
+    axios.post('https://reqres.in/api/users', user).
+      then(response => {
+        console.log(response)
+        setUserId(response.data.id)
+        console.log(userId)
+      })
+  }, [users])
 
   return (
     <div className="My_Login">
